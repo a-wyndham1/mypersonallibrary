@@ -1,0 +1,18 @@
+<h1>{{shelfTitle}}</h1>
+
+<table class="table">
+    <tr>    
+        <th scope="col">Book Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Status</th>
+    </tr>
+
+    {{#each books}}
+    <tr>
+        <td>{{title}}</td>
+        <td>{{author}}</td>
+        <td>{{status}}</td>
+    </tr>
+    {{/each}}
+</table>
+

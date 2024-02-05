@@ -1,0 +1,12 @@
+<h1>Login</h1>
+{{#if error}}
+    <div style="color: red" >{{error}}</div>
+{{/if}}<br>
+<form class="form-group" action="" method="POST">
+    Username: <input type="text" name="username"> <br>
+    Password: <input type="password" name="password"> <br>
+    <input type="submit">
+</form>
+
+<h2>If you do not have an account, sign up here: </h2>
+<a href="/signup">Sign Up</a>

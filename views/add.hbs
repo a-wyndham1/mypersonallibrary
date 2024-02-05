@@ -1,0 +1,24 @@
+<h1>Add to a shelf</h1>
+{{#if title}}
+    <div style="color: red" >{{title}}</div>
+{{/if}}<br>
+{{#if author}}
+    <div style="color: red" >{{author}}</div>
+{{/if}}<br>
+<form class="form-group" action="" method="POST">
+    Shelf: 
+    <select name="shelfTitle">
+        {{#each shelves}}
+            <option value="{{shelfTitle}}">{{shelfTitle}}</option>
+        {{/each}}
+    </select><br>
+    Book Title: <input type="text" name="title"><br>
+    Author: <input type="text" name="author"><br>
+    Status: <select name="status">
+        <option value="currentlyReading">Currently Reading</option>
+        <option value="toRead">Want to Read</option>
+        <option value="read">Read</option>
+        <option value="dnf">Did not Finish</option>
+    </select>
+    <input type="submit">
+</form>

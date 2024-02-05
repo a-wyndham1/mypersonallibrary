@@ -1,0 +1,30 @@
+<h1>{{name}}'s Books</h1>
+
+<form class="form-group" action="" method="GET">
+    Title: <input type="input" name="titleSort">
+    Author: <input type="input" name="authorSort">
+    Status: <select name="status">
+        <option value=""></option>
+        <option value="currentlyReading">Currently Reading</option>
+        <option value="toRead">Want to Read</option>
+        <option value="read">Read</option>
+        <option value="dnf">Did not Finish</option>
+    </select>
+    <input type="submit" value="Filter">
+</form>
+
+<table class="table">
+    <tr>    
+        <th scope="col">Book Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Status</th>
+    </tr>
+
+    {{#each books}}
+    <tr>
+        <td>{{title}}</td>
+        <td>{{author}}</td>
+        <td>{{status}}</td>
+    </tr>
+    {{/each}}
+</table>
